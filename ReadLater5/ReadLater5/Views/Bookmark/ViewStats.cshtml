@@ -1,0 +1,25 @@
+﻿
+@model IEnumerable<Entity.Bookmark>
+@{
+    ViewBag.Title = "View Statistics";
+}
+
+<h2>View Stats</h2>
+@using (Html.BeginForm())
+{
+
+    @foreach (var item in Model)
+    {
+        <table>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.URL)
+                </td>
+           
+            </tr>
+        </table>
+    }
+
+}
